@@ -1,4 +1,5 @@
 ---
+Layout: default
 title: Vapor test
 ---
 Vapor Test
