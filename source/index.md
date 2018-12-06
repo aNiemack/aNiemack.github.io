@@ -5,18 +5,18 @@ Title: Download Source Code
 Souce Distributions
 ===================
 
-We request that you cite *VAPOR* in your scholarly work
+We request that you cite **VAPOR** in your scholarly work
 -------------------------------------------------------
-Funding for continued support and development of *VAPOR* is contingent on *NCAR* and the *National Science Foundation* receiving adequate accredation for *VAPOR*'s use.
-Please cite *VAPOR* when appropriate in all of your posters, publications, and presentations.  Thanks!
+Funding for continued support and development of **VAPOR** is contingent on **NCAR** and the **National Science Foundation** receiving adequate accredation for **VAPOR**'s use.
+Please cite **VAPOR** when appropriate in all of your posters, publications, and presentations.  Thanks!
 
-*VAPOR* is distributed under a BSD license agreement.
+**VAPOR** is distributed under a BSD license agreement.
 
 Note: We strongly recommend installation from binaries, rather than source, whenever possible.
 
 [Source Installation Guide](https://aNiemack.github.io/guide)
 
-*VAPOR*-2.6.0  ![Alt text](/aNiemack/vapor-2.6.0-src.tar.gz)
+For the latest version of **VAPOR** vist  [Source Files](https://github.com/NCAR/VAPOR)
 
 Third party library dependencies
 VAPOR versions 2.6.0-RH7 were built with: 
