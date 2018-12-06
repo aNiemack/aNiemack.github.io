@@ -16,7 +16,7 @@ Note: We strongly recommend installation from binaries, rather than source, when
 
 [Source Installation Guide](https://aNiemack.github.io/guide)
 
-For the latest version of **VAPOR** vist  [VAPOR 3](https://github.com/NCAR/VAPOR/archive/VAPOR3_3.0.0.tar.gz)
+Source Code [VAPOR 3](https://github.com/NCAR/VAPOR/archive/VAPOR3_3.0.0.tar.gz)
 
 Third party library dependencies
 ================================
