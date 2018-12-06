@@ -1,3 +1,7 @@
+---
+Layout: download
+title: Soure Installation Guide
+---
 **VAPOR** Source Installation Dependencies
 ======================================
 3rd Party Applications and Libraries
