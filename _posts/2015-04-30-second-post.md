@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Second post"
 date: 2015-04-30
 ---
