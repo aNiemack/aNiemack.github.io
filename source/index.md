@@ -1,5 +1,5 @@
 ---
-Layout: Default
+Layout: download
 Title: Download Source Code
 ---
 Souce Distributions
