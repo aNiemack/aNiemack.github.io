@@ -5,10 +5,11 @@ Title: Download Source Code
 Souce Distributions
 ===================
 
-We request that you cite **VAPOR** in your scholarly work
--------------------------------------------------------
-Funding for continued support and development of **VAPOR** is contingent on **NCAR** and the **National Science Foundation** receiving adequate accredation for **VAPOR**'s use.
-Please cite **VAPOR** when appropriate in all of your posters, publications, and presentations.  Thanks!
+> We request that you cite **VAPOR** in your scholarly work
+> -------------------------------------------------------
+> Funding for continued support and development of **VAPOR** is contingent on **NCAR** and the **National Science 
+> Foundation** receiving adequate accredation for **VAPOR**'s use.
+> Please cite **VAPOR** when appropriate in all of your posters, publications, and presentations.  Thanks!
 
 **VAPOR** is distributed under a BSD license agreement.
 
