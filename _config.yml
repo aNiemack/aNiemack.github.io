@@ -1,3 +1,4 @@
 name: Andrew Niemack
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
+theme: Tactile
