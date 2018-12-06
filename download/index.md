@@ -4,8 +4,9 @@ Title: Downloads landing page
 ---
 Download **VAPOR**
 ==================
+
 Copyright/Terms of Use
-----------------------
+---------------------
 
 copyright and terms of use info can go here.
 
