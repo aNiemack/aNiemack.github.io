@@ -10,7 +10,7 @@ Vapor Test
 **VAPOR** runs on most *UNIX* and *Windows* systems equipped with modern 3D graphics cards.
 
 The **VAPOR** Data Collection (**VDC**) data model allows users progressively access the fidelity of their data, allowing for the visualization of terascale data sets on commodity hardware.
-**VAPOR** can also directly import data formats including *WRF, *MOM*, *POP*, *ROMS*, and some *GRIB* and *NetCDF* files.
+**VAPOR** can also directly import data formats including *WRF*, *MOM*, *POP*, *ROMS*, and some *GRIB* and *NetCDF* files.
 
 Users can perform ad-hoc analysis with **VAPOR**'s interactive Python interpreter; which allows for the creation, modification, and visualization of new variables based on input model data.
 
