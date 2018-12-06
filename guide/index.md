@@ -1,6 +1,6 @@
 ---
 Layout: download
-title: Soure Installation Guide
+title: Source Installation Guide
 ---
 **VAPOR** Source Installation Dependencies
 ======================================
