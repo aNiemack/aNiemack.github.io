@@ -4,4 +4,4 @@ title: Vapor Docs
 ---
 For additionally documentation see:
 -----------------------------------
-* [Usage](https://aNiemack.github.io/_docs/usage)
+* [Usage](https://aNiemack.github.io/_docs/Usage)
