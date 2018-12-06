@@ -6,7 +6,6 @@ title: Source Installation Guide
 ======================================
 
 3rd Party Applications and Libraries
-------------------------------------
 
 **VAPOR** depends on a small number of 3rd party applications. Before you can begin the installation of **VAPOR** from source you must verify the existence of these 3rd party packages and know where they live on your system. If the **VAPOR** 3rd party dependencies do not already exist, or if they have incompatible version numbers, you must acquire and install appropriate versions. Note, in many instances a mismatched version number, particulary a higher version number than what is recommend, will cause no harm.
 
