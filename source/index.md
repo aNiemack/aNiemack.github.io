@@ -21,7 +21,7 @@ Source Code: [VAPOR 3](https://github.com/NCAR/VAPOR/archive/VAPOR3_3.0.0.tar.gz
 Third party library dependencies
 ================================
 VAPOR versions 2.6.0-RH7 were built with 
------------------------------------------
+---------------------------------------
 Library 	 version 	 Build configuration notes
 
 assimp 	   3.3.1 	 
