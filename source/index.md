@@ -19,20 +19,35 @@ Note: We strongly recommend installation from binaries, rather than source, when
 For the latest version of **VAPOR** vist  [Source Files](https://github.com/NCAR/VAPOR)
 
 Third party library dependencies
+================================
 VAPOR versions 2.6.0-RH7 were built with: 
 -----------------------------------------
 Library 	 version 	 Build configuration notes
+
 assimp 	   3.3.1 	 
+
 freetype 	 2.7.1 	 
+
 ftgl 	     2.1.3-rc5 	 
+
 glew 	     2.0.0 	 
+
 grib_api   1.19.0 	 with unrealsed memory leak patches
+
 hdf5 	     1.10.0 	 
+
 jpeg 	     9b 	 
+
 libgeotiff 1.4.2 	   --with-libtiff
+
 udunits 	 2.2.20 	 
+
 netCDF 	   4.4.1.1 	 --enable-shared --disable-dap
+
 tiff 	     4.0.7 	   --enable-lzw --enable-jpeg --enable-old-jpeg
+
 proj 	     4.9.2 	 
+
 python 	   2.7.13 	 --enable-shared
+
 Qt 	       4.8.7 	   -no-webkit -no-multimedia -no-script -no-qt3support -opensource (-cocoa on Mac)
