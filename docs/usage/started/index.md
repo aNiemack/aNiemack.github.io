@@ -34,7 +34,8 @@ Help is available a number of ways:
    * Tool tips, which appear when you hold your mouse over a button or input field.
    * Context-sensitive help within VAPOR. Select Explain This from the Help menu (Figure 1), then click the feature you would like to have explained.
 
-1[alt text](/aNiemack.github.io/vapor_explain.png "vapor help")
+![alt text](/aNiemack.github.io/vapor_explain.png "vapor help")
+
 Figure 1 - Click to see an image of the VAPOR screen.
 
 Starting VAPOR
