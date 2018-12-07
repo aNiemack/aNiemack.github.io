@@ -1,9 +1,9 @@
 ---
 Layout: default
-Title: Download Source Code
+title: Download Source Code
 ---
 Souce Distributions
-===================
+-------------------
 
 > We request that you cite **VAPOR** in your scholarly work
 > -------------------------------------------------------
