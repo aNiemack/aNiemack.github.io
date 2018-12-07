@@ -2,8 +2,6 @@
 Layout: default
 title: Vapor test
 ---
-Vapor Test
-==========
 
 **VAPOR** is the **V**isualization and **A**nalysis **P**latform for **O**cean, Atmosphere, and Solar **R**esearchers.  
 **VAPOR** provides an interactive 3D visualization environment that can also produce animations and still frame images.
