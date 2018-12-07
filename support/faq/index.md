@@ -1,8 +1,6 @@
 ---
 Layout: default
 ---
-**VAPOR** FAQ
-=============
 
 ### Installation
 
@@ -36,8 +34,8 @@ Vapor should run on most UNIX (including Mac OS X) and Windows systems. Check th
 
 <h3 id="req">What are the system requirements?</h3>
 
-    We recommend a minimum of 512 MBs of main memory. VAPOR relies heavily on RAM for caching data in order to improve performance. So the more memory you have, the better the performance, in general.This is particularly true when animating through temporal data.
-    A graphics card with 3D hardware texture support and an OpenGL driver that can take advantage of the card are a must. Note that standard Linux distributions come with a generic driver that will work on all systems, but this will usually not give adequate performance. For best performance a driver provided by the graphics card vendor is essential. If you plan to use Linux and have not yet purchased a graphics card, you should check that the card you are considering purchasing has a driver optimized for Linux.
+*    We recommend a minimum of 512 MBs of main memory. VAPOR relies heavily on RAM for caching data in order to improve performance. So the more memory you have, the better the performance, in general.This is particularly true when animating through temporal data.
+*    A graphics card with 3D hardware texture support and an OpenGL driver that can take advantage of the card are a must. Note that standard Linux distributions come with a generic driver that will work on all systems, but this will usually not give adequate performance. For best performance a driver provided by the graphics card vendor is essential. If you plan to use Linux and have not yet purchased a graphics card, you should check that the card you are considering purchasing has a driver optimized for Linux.
 
 <h3 id="start">Why does vaporgui fail to start?</h3>
 
