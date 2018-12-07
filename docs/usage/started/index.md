@@ -46,7 +46,8 @@ Launch the VAPOR GUI by following the procedures for your own platform. (Startin
 vglrun vaporgui
 
  
-VAPOR user interface image
+![alt text](/aNiemack.github.io/2.png)
+
 Figure 2 - Click to enlarge.
 
  
@@ -73,7 +74,9 @@ Steps
 This example assumes that you have copied these sample [WRF-ARW data files](ftp://ftp.ucar.edu/vapor/data/Katrina) from the ftp site to a directory on your own system.
 
 Substitute your own directory name and data set as appropriate.
-Load data
+
+![alt text](/aNiemack.github.io/3.png)
+
 Figure 3 - Click to enlarge.
 
  
@@ -95,7 +98,8 @@ Once the scene is established, you can manipulate it as follows.
 
 You may need to adjust the “scene stretch” to visualize 3D data effectively. For example, if the box is 1,000 km long and 1,000 km wide but only 20 km high, the scene will be quite flat in the Z dimension.
 
-Stretch scene image
+![alt text](/aNiemack.github.io/4.png)
+
 Figure 4 - Click to see the whole panel.
 
  
@@ -112,7 +116,8 @@ The box in the scene will be taller, as will the portion of the terrain in the s
 
 Display a background image to help you see the geographic area associated with the data you are visualizing.
 
-Stretch scene image
+![alt text](/aNiemack.github.io/5.png)
+
 Figure 5 - Click to enlarge.
 
  
@@ -133,7 +138,8 @@ You can either select a variable to visualize from the Variable dropdown list or
 
 For this demonstration, define a variable and add it to the dropdown list as follows.
 
-Define variable image
+![alt text](/aNiemack.github.io/6.png)
+
 Figure 6 - Click to see the whole panel.
 
  
@@ -160,7 +166,8 @@ After defining the new variable, take these additional steps:
 
 The **Transfer Function** Editor controls colors and opacity in the volume rendering of your data.
 
-Edit transfer function image
+![alt text](/aNiemack.github.io/7.png)
+
 Figure 7 - Click to enlarge.
 
  
@@ -176,7 +183,8 @@ Figure 7 - Click to enlarge.
 7.    Move the opacity slider down until you can see the most useful representation of your data.  
 8.    Click Fit to View and Histo.
 
-Adjusting variable interval image
+![alt text](/aNiemack.github.io/8.png)
+
 Figure 8 - Click for another view of the Transfer Function Editor.
 
 ### Capturing an animation sequence
@@ -185,7 +193,8 @@ Before animating and capturing the visualization, you may want to further define
 
 Then, use the VAPOR animation toolbar or “player” to animate and capture a sequence of the visualization. (Figure 9)
 
-Adjusting variable interval image
+![alt text](/aNiemack.github.io/9.png)
+
 Figure 9 - Click to enlarge.
 
  
