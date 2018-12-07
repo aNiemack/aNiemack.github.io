@@ -2,8 +2,6 @@
 Layout: Default
 Title: Downloads landing page
 ---
-Download **VAPOR**
-==================
 
 Copyright/Terms of Use
 ---------------------
