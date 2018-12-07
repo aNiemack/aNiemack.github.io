@@ -1,6 +1,6 @@
 ---
 Layout: Default
-Title: Downloads landing page
+title: Downloads landing page
 ---
 
 Copyright/Terms of Use
