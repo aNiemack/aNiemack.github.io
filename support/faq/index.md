@@ -1,5 +1,6 @@
 ---
 Layout: default
+title: FAQ
 ---
 
 ### Installation
