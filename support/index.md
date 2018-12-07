@@ -2,8 +2,6 @@
 Layout: default
 title: Support
 ---
-Support
-=======
 
 * [Forum](https://aNiemack.github.io/support/forum)
 * [FAQ](https://aNiemack.github.io/support/faq)
