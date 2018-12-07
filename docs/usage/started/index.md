@@ -3,7 +3,7 @@ Getting Started with VAPOR
 
 The VAPOR user interface enables scientists to visualize both large- and small-scale features of time-varying data sets. Its interactive 3D visualization environment runs on most UNIX, Mac OS X, and Windows systems that are equipped with modern 3D graphics cards. We provide binary installers that work on all supported platforms and we strongly recommend using a binary distribution for your installation.
 
-The documentation and demonstration below outline and illustrate some basic steps to help you get started using VAPOR. It is intended for general use but also contains some information specific to NCAR/UCAR systems. We also provide example data sets, usage guides, and reference material on these [Documentation](https://aNiemack.github.io/docs) and Training pages.
+The documentation and demonstration below outline and illustrate some basic steps to help you get started using VAPOR. It is intended for general use but also contains some information specific to NCAR/UCAR systems. We also provide example data sets, usage guides, and reference material on these [Documentation](https://aNiemack.github.io/doc) and Training pages.
 
 Installing VAPOR
 ----------------
