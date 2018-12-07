@@ -1,5 +1,7 @@
-Getting Started with VAPOR
-==========================
+---
+Layout: default
+title: Getting Started with VAPOR
+---
 
 The VAPOR user interface enables scientists to visualize both large- and small-scale features of time-varying data sets. Its interactive 3D visualization environment runs on most UNIX, Mac OS X, and Windows systems that are equipped with modern 3D graphics cards. We provide binary installers that work on all supported platforms and we strongly recommend using a binary distribution for your installation.
 
