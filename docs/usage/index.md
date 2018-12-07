@@ -2,8 +2,6 @@
 Layout: Document
 title: Usage
 ---
-Usage
-=====
 
 * [Getting Started with **VAPOR**](https://aNiemack.github.io/docs/usage/started)
 * [Data Analysis with **VAPOR**](https://aNiemack.github.io/docs/usage/analysis)
