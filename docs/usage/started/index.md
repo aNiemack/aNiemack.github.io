@@ -62,14 +62,14 @@ Visualization example using WRF-ARW
 This documentation will be most helpful if you refer to it after starting VAPOR as described above, then work through the example to create a basic visualization.
 Steps
 
-1.    Load your data set
+1.    [Load your data set](#loading)
 2.    Stretch the scene
 3.    Display an image
 4.    Define a variable
 5.    Edit the transfer function
 6.    Capture an animation
 
-### Loading a data set
+<h3 id="loading">Loading a data set</h3>
 
 This example assumes that you have copied these sample [WRF-ARW data files](ftp://ftp.ucar.edu/vapor/data/Katrina) from the ftp site to a directory on your own system.
 
