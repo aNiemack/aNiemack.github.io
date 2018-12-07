@@ -16,7 +16,7 @@ Installing VAPOR
 >
 >VAPOR is already available on the Geyser and Caldera visualization and analysis clusters. See the CISL documentation for >those systems as well as these instructions for starting TurboVNC.
 >
->The sample data files used in the visualization example below are in /glade/u/sampledata/vapor/WRF/Katrina and also >available from this ftp site.
+>The sample data files used in the visualization example below are in /glade/u/sampledata/vapor/WRF/Katrina and also available from this ftp site.
 
 Preparing data
 --------------
