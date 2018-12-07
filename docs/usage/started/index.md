@@ -63,11 +63,11 @@ This documentation will be most helpful if you refer to it after starting VAPOR 
 Steps
 
 1.    [Load your data set](#loading)
-2.    Stretch the scene
-3.    Display an image
-4.    Define a variable
-5.    Edit the transfer function
-6.    Capture an animation
+2.    [Stretch the scene](#stretch)
+3.    [Display an image](#display)
+4.    [Define a variable](#define)
+5.    [Edit the transfer function](#edit)
+6.    [Capture an animation](#capture)
 
 <h3 id="loading">Loading a data set</h3>
 
@@ -94,7 +94,7 @@ Once the scene is established, you can manipulate it as follows.
   * Zoom in and out by dragging your right mouse button up and down.
   * Move it horizontally or vertically by dragging with your middle mouse button.
 
-### Stretching a scene
+<h3 id="stretch">Stretching a scene</h3>
 
 You may need to adjust the “scene stretch” to visualize 3D data effectively. For example, if the box is 1,000 km long and 1,000 km wide but only 20 km high, the scene will be quite flat in the Z dimension.
 
@@ -112,7 +112,7 @@ Figure 4 - Click to see the whole panel.
 
 The box in the scene will be taller, as will the portion of the terrain in the scene.
 
-### Displaying images
+<h3 id="display">Displaying images</h3>
 
 Display a background image to help you see the geographic area associated with the data you are visualizing.
 
@@ -132,7 +132,7 @@ Figure 5 - Click to enlarge.
 6.    Right click the red image handles (Figure 5) and drag them to expand the portion of the image that will be visible.
 7.    Uncheck and then recheck the View box next to Instance: 1.
 
-### Defining and selecting a variable to visualize
+<h3 id="define">Defining and selecting a variable to visualize</h3>
 
 You can either select a variable to visualize from the Variable dropdown list or define a new variable.
 
@@ -162,7 +162,7 @@ After defining the new variable, take these additional steps:
  2.   Select the wind variable from the Variable dropdown list.
  3.   Check the View box next to Instance: 1.
 
-### Editing the transfer function
+<h3 id="edit">Editing the transfer function</h3>
 
 The **Transfer Function** Editor controls colors and opacity in the volume rendering of your data.
 
@@ -187,7 +187,7 @@ Figure 7 - Click to enlarge.
 
 Figure 8 - Click for another view of the Transfer Function Editor.
 
-### Capturing an animation sequence
+<h3 id="capture">Capturing an animation sequence</h3>
 
 Before animating and capturing the visualization, you may want to further define or restrict the region you’re observing by rotating the scene, zooming in or out, or changing the size of the region box.
 
