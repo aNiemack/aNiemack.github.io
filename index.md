@@ -1,3 +1,7 @@
+---
+layout: default
+title: Andrew Niemack
+---
 
 # An Example Heading
 
