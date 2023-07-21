@@ -172,7 +172,7 @@ const IndexPage: React.FC<PageProps> = () => {
               </a>
               {link.badge && (
                 <span style={badgeStyle} aria-label="New Badge">
-                  NEW!
+                  TESTING
                 </span>
               )}
               <p style={descriptionStyle}>{link.description}</p>
