@@ -1,79 +1,52 @@
 import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
 import { useState, useEffect, useRef } from "react";
-import { stringify } from "querystring";
+import { FileType, system } from "./system";
+import {
+  text,
+  text1,
+  copyRightText,
+  helpText,
+  cowText,
+  effectText,
+} from "./baseText";
 
+/* Wait some amount of time in ms */
 const delay = (ms: number) => new Promise((res) => setTimeout(res, ms));
 
 const IndexPage: React.FC<PageProps> = () => {
-  const [doubleKnit, setDoubleKnit] = useState(``);
+  const [nightHawk, setNightHawk] = useState(``);
   const [systems, setSystems] = useState(``);
   const [copyRight, setCopyRight] = useState(``);
   const [helpPrompt, setHelpPrompt] = useState(``);
-  const [output, setOutput] = useState([``]);
-
+  const [output, setOutput] = useState([[``]]);
   const [prompt, setPrompt] = useState(`user-0 (/) $`);
   const [cmdInput, setCmdInput] = useState(``);
-  const [wd, setWd] = useState(`/`);
-  const [fs, setfs] = useState({
-    "/": {
-      type: "d",
-      children: {
-        education: {
-          type: "d",
-          children: {
-            ".": { type: "f", content: "education" },
-            "..": { type: "f", content: "/" },
-          },
-        },
-        experience: {
-          type: "d",
-          children: {
-            ".": { type: "f", content: "education" },
-            "..": { type: "f", content: "/" },
-          },
-        },
-      },
-    },
-  });
+  const [wd, setWd] = useState(system.root);
 
-  const help = () => {
-    console.log("help is here");
-    let commandList = Object.keys(commands)
-    console.log(commandList)
-    setOutput((oldOutput) => oldOutput.concat(prompt + " " + cmdInput))
-    setOutput((oldOutput) => oldOutput.concat(commandList))
+  // Used to keep paged scrolled to bottom.
+  const scrollRef = useRef<null | HTMLFormElement>(null);
+  const focusRef = useRef<null | HTMLInputElement>(null);
+
+  const scrollToBottom = () => {
+    scrollRef.current!.scrollIntoView({ behavior: "instant" });
   };
 
-  const commands: { [key: string]: { "-h"?: string; action?: Function } } = {
-    pwd: { "-h": "Prints current working directory" },
-    ls: { "-h": "Prints contents of current directory" },
-    help: { action: help },
+  useEffect(() => {
+    scrollToBottom();
+  }, [output]);
+
+  // Focus the input when it appears
+  const focus = () => {
+    focusRef.current!.focus();
   };
 
-  const text = `
-  ______                     __       __         ___  ____             _   _     
- |_   _ \`.                  [  |     [  |       |_  ||_  _|           (_) / |_   
-   | | \`. \\  .--.   __   _   | |.--.  | | .---.   | |_/ /    _ .--.   __ \`| |-'  
-   | |  | |/ .'\`\\ \\[  | | |  | '/'\`\\ \\| |/ /__\\\\  |  __'.   [ \`.-. | [  | | |    
-  _| |_.' /| \\__. | | \\_/ |, |  \\__/ || || \\__., _| |  \\ \\_  | | | |  | | | |,   
- |______.'  '.__.'  '.__.'_/[__;.__.'[___]'.__.'|____||____|[___||__][___]\\__/                                       
-`;
+  useEffect(() => {
+    console.log("here");
+    focus();
+  }, [helpPrompt]);
 
-  const text1 = `
-    ______                   _                                                    
-  .' ____ \\                 / |_                                                  
-  | (___ \\_|  _   __  .--. \`| |-'.---.  _ .--..--.   .--.                         
-   _.____\`.  [ \\ [  ]( (\`\\] | | / /__\\\\[ \`.-. .-. | ( (\`\\]                        
-  | \\____) |  \\ '/ /  \`'.'. | |,| \\__., | | | | | |  \`'.'.                        
-   \\______.'[\\_:  /  [\\__) )\\__/ '.__.'[___||__||__][\\__) )
-             \\__.'
-`;
-
-  const copyRightText = `1965 Andrew Niemack`;
-  const helpText = `Enter 'help' to view the list of valid commands.`;
-
-  let i = 0;
+  // Creates typewriter effect.
   const writer = async (
     text: string,
     foo: { (value: React.SetStateAction<string>): void; (arg0: string): void }
@@ -84,66 +57,318 @@ const IndexPage: React.FC<PageProps> = () => {
     }
   };
 
-  const processor = (args: string[], foo: Function) => {
-    foo(args);
-  };
-
   useEffect(() => {
-    writer(text, setDoubleKnit);
-    if (doubleKnit.length == text.length) {
+    writer(text, setNightHawk);
+    if (nightHawk.length == text.length) {
       writer(text1, setSystems);
     }
   }, []);
 
   useEffect(() => {
-    if (doubleKnit.length == text.length) {
+    if (nightHawk.length == text.length) {
       writer(text1, setSystems);
     }
-  }, [doubleKnit]);
+  }, [nightHawk]);
 
   useEffect(() => {
-    if (doubleKnit.length == text.length && systems.length == text1.length) {
+    if (nightHawk.length == text.length && systems.length == text1.length) {
       writer(copyRightText, setCopyRight);
     }
-  }, [doubleKnit, systems]);
+  }, [nightHawk, systems]);
 
   useEffect(() => {
     if (
-      doubleKnit.length == text.length &&
+      nightHawk.length == text.length &&
       systems.length == text1.length &&
       copyRight.length == copyRightText.length
     ) {
       writer(helpText, setHelpPrompt);
     }
-  }, [doubleKnit, systems, copyRight]);
+  }, [nightHawk, systems, copyRight]);
+
+  // Handling commands.
+  const processor = (args: string[], foo: Function) => {
+    foo(args);
+  };
 
   const cmdController = (value: string) => {
     setCmdInput(value);
   };
 
   const processCmd = () => {
-    console.log("hello");
-    console.log(cmdInput);
-    if (cmdInput in commands) {
-      console.log("valid");
-      processor([""], commands[cmdInput].action!);
+    const input = cmdInput.split(" ");
+    const cmd = input[0];
+    const args = input.slice(1);
+    if (cmd in commands) {
+      processor(args, commands[cmd].action!);
     } else {
-      console.log("invalid");
+      const newOutput = [
+        `${prompt} ${cmdInput}`,
+        `${cmd} is not a known command.`,
+      ];
+      setOutput([...output, newOutput]);
     }
     setCmdInput(``);
   };
 
+  const help = (args: string[]) => {
+    let newOutput: string[];
+    if (args.length > 1) {
+      newOutput = [
+        `${prompt} ${cmdInput}`,
+        `Invalid arguments.`,
+        `'help' takes no additional arguments.`,
+        `Did you mean 'help' or 'help -h'?`,
+      ];
+      setOutput([...output, newOutput]);
+    } else {
+      switch (args[0]) {
+        case "-h":
+          newOutput = [`${prompt} ${cmdInput}`, `${commands.help["-h"]}`];
+          setOutput([...output, newOutput]);
+          break;
+        case undefined:
+          newOutput = [`${prompt} ${cmdInput}`].concat(
+            Object.entries(commands).map(([k, v]) => `${k} - ${v["-h"]}`)
+          );
+          setOutput([...output, newOutput]);
+          break;
+        default:
+          newOutput = [
+            `${prompt} ${cmdInput}`,
+            `Invalid arguments.`,
+            `'help' takes no additional arguments.`,
+            `Did you mean 'help' or 'help -h'?`,
+          ];
+          setOutput([...output, newOutput]);
+      }
+    }
+  };
+
+  const pwd = (args: string[]) => {
+    let newOutput: string[];
+    if (args.length > 1) {
+      newOutput = [
+        `${prompt} ${cmdInput}`,
+        `Invalid arguments.`,
+        `'pwd' takes no additional arguments.`,
+        `Did you mean 'pwd' or 'pwd -h'?`,
+      ];
+      setOutput([...output, newOutput]);
+    } else {
+      switch (args[0]) {
+        case "-h":
+          newOutput = [`${prompt} ${cmdInput}`, `${commands.pwd["-h"]}`];
+          setOutput([...output, newOutput]);
+          break;
+        case undefined:
+          newOutput = [`${prompt} ${cmdInput}`, `${wd.display}`];
+          setOutput([...output, newOutput]);
+          break;
+        default:
+          newOutput = [
+            `${prompt} ${cmdInput}`,
+            `Invalid arguments.`,
+            `'pwd' takes no additional arguments.`,
+            `Did you mean 'pwd' or 'pwd -h'?`,
+          ];
+          setOutput([...output, newOutput]);
+      }
+    }
+  };
+
+  const ls = (args: string[]) => {
+    let newOutput: string[];
+    if (args.length > 1) {
+      newOutput = [
+        `${prompt} ${cmdInput}`,
+        `Too many arguments.`,
+        `'ls' expected 1 but got ${args.length}.`,
+      ];
+      setOutput([...output, newOutput]);
+    } else {
+      if (wd.children?.map((child) => child.display).includes(args[0])) {
+        if (args[0] == ".") {
+          newOutput = [`${prompt} ${cmdInput}`].concat(
+            wd.children.map((child) => child.display)
+          );
+          setOutput([...output, newOutput]);
+        } else {
+          newOutput = [`${prompt} ${cmdInput}`].concat(
+            wd
+              .children!.filter((child) => child.display == args[0])[0]
+              .children!.map((nested) => nested.display)
+          );
+          setOutput([...output, newOutput]);
+        }
+      } else {
+        switch (args[0]) {
+          case "-h":
+            newOutput = [`${prompt} ${cmdInput}`, `${commands.ls["-h"]}`];
+            setOutput([...output, newOutput]);
+            break;
+          case undefined:
+            newOutput = [`${prompt} ${cmdInput}`].concat(
+              wd.children!.map((child) => child.display)
+            );
+            setOutput([...output, newOutput]);
+            break;
+          default:
+            newOutput = [
+              `${prompt} ${cmdInput}`,
+              `Invalid arguments.`,
+              `${args[0]} not found`,
+            ];
+            setOutput([...output, newOutput]);
+        }
+      }
+    }
+  };
+
+  const cd = (args: string[]) => {
+    let newOutput: string[];
+    if (args.length > 1) {
+      newOutput = [
+        `${prompt} ${cmdInput}`,
+        `Too many arguments.`,
+        `'cd' expected 1 but got ${args.length}.`,
+      ];
+      setOutput([...output, newOutput]);
+    } else {
+      if (wd.children?.map((child) => child.display).includes(args[0])) {
+        if (args[0] == ".") {
+          newOutput = [`${prompt} ${cmdInput}`];
+          setOutput([...output, newOutput]);
+        } else if (args[0] == "..") {
+          newOutput = [`${prompt} ${cmdInput}`];
+          setOutput([...output, newOutput]);
+          setWd(wd.parent!);
+          setPrompt(`user-0 (${wd.parent?.display}) $`);
+        } else if (
+          wd.children.filter((child) => child.display == args[0])[0].type ==
+          FileType.f
+        ) {
+          newOutput = [
+            `${prompt} ${cmdInput}`,
+            `${args[0]} is not a directory.`,
+          ];
+          setOutput([...output, newOutput]);
+        } else {
+          newOutput = [`${prompt} ${cmdInput}`];
+          setOutput([...output, newOutput]);
+          setWd(system[args[0]]);
+          setPrompt(`user-0 (${args[0]}) $`);
+        }
+      } else {
+        switch (args[0]) {
+          case "-h":
+            newOutput = [`${prompt} ${cmdInput}`, `${commands.cd["-h"]}`];
+            setOutput([...output, newOutput]);
+            break;
+          default:
+            newOutput = [
+              `${prompt} ${cmdInput}`,
+              `Invalid arguments.`,
+              `${args[0]} not found`,
+            ];
+            setOutput([...output, newOutput]);
+        }
+      }
+    }
+  };
+
+  const clear = () => {
+    setOutput([[``]]);
+  };
+
+  const cat = (args: string[]) => {
+    let newOutput: string[];
+    if (args.length > 1) {
+      newOutput = [
+        `${prompt} ${cmdInput}`,
+        `Too many arguments.`,
+        `'cat' expected 1 but got ${args.length}.`,
+      ];
+      setOutput([...output, newOutput]);
+    } else {
+      if (wd.children?.map((child) => child.display).includes(args[0])) {
+        if (
+          wd.children.filter((child) => child.display == args[0])[0].type !=
+          FileType.f
+        ) {
+          newOutput = [
+            `${prompt} ${cmdInput}`,
+            `${args[0]} is a directory not a file.`,
+          ];
+          setOutput([...output, newOutput]);
+        } else {
+          newOutput = [`${prompt} ${cmdInput}`].concat(
+            wd.children!.filter((child) => child.display == args[0])[0].content!
+          );
+          setOutput([...output, newOutput]);
+        }
+      } else {
+        switch (args[0]) {
+          case "-h":
+            newOutput = [`${prompt} ${cmdInput}`, `${commands.cat["-h"]}`];
+            setOutput([...output, newOutput]);
+            break;
+          default:
+            newOutput = [
+              `${prompt} ${cmdInput}`,
+              `Invalid arguments.`,
+              `${args[0]} not found`,
+            ];
+            setOutput([...output, newOutput]);
+        }
+      }
+    }
+  };
+
+  const cowsay = (args: string[]) => {
+    let newOutput: string[];
+    switch (args[0]) {
+      case "-h":
+        newOutput = [`${prompt} ${cmdInput}`, `${commands.cowsay["-h"]}`];
+        setOutput([...output, newOutput]);
+        break;
+      case undefined:
+        newOutput = newOutput = [`${prompt} ${cmdInput}`]
+          .concat([`< Hello there. >`])
+          .concat(cowText);
+        setOutput([...output, newOutput]);
+        break;
+      default:
+        newOutput = newOutput = [`${prompt} ${cmdInput}`]
+          .concat([`< ${args.join(" ")} >`])
+          .concat(cowText);
+        setOutput([...output, newOutput]);
+    }
+  };
+
+  const commands: {
+    [key: string]: { "-h"?: string; action?: Function };
+  } = {
+    pwd: { "-h": "Prints current working directory.", action: pwd },
+    cd: { "-h": "Changes the working directory.", action: cd },
+    ls: { "-h": "Prints contents of current directory.", action: ls },
+    help: { "-h": "Prints the list of valid commands.", action: help },
+    clear: { "-h": "Clears all output.", action: clear },
+    cat: { "-h": "Print file contents.", action: cat },
+    cowsay: { "-h": "Prints entered text.", action: cowsay },
+  };
+
   return (
-    <main className="h-[100vh] w-[100vw] bg-stone-900 font-mono overflow-auto crt">
+    <main className="h-[100vh] w-[100vw] bg-stone-900 font-mono overflow-auto crt select-none snap-mandatory">
       <pre className="text-white p-0 m-0">
-        <code>{doubleKnit}</code>
+        <code>{nightHawk}</code>
       </pre>
       <pre className="text-white p-0 m-0">
         <code>{systems}</code>
       </pre>
       <div
         className={
-          doubleKnit.length == text.length && systems.length == text1.length
+          nightHawk.length == text.length && systems.length == text1.length
             ? "text-white m-4"
             : "hidden"
         }
@@ -152,7 +377,16 @@ const IndexPage: React.FC<PageProps> = () => {
       </div>
       <div
         className={
-          doubleKnit.length == text.length &&
+          nightHawk.length == text.length && systems.length == text1.length
+            ? "text-white m-4"
+            : "hidden"
+        }
+      >
+        {effectText}
+      </div>
+      <div
+        className={
+          nightHawk.length == text.length &&
           systems.length == text1.length &&
           copyRight.length == copyRightText.length
             ? "text-white m-4"
@@ -163,27 +397,31 @@ const IndexPage: React.FC<PageProps> = () => {
       </div>
       <div
         className={
-          doubleKnit.length == text.length &&
+          nightHawk.length == text.length &&
           systems.length == text1.length &&
           copyRight.length == copyRightText.length &&
           helpPrompt.length == helpText.length &&
           output.length > 1
-            ? "text-gray-400"
+            ? "text-gray-400 whitespace-pre"
             : "hidden"
         }
       >
-        {output.map((line) => (
-          <div
-            key={output.indexOf(line)}
-            className="flex flex-row m-5 space-x-2 mt-0 mb-0"
-          >
-            {line}
+        {output.map((block) => (
+          <div key={output.indexOf(block)} className="flex flex-col mt-3">
+            {block.map((line) => (
+              <div
+                key={`${output.indexOf(block)}-${block.indexOf(line)}`}
+                className="flex flex-row m-5 space-x-2 mt-0 mb-0"
+              >
+                {line}
+              </div>
+            ))}
           </div>
         ))}
       </div>
       <div
         className={
-          doubleKnit.length == text.length &&
+          nightHawk.length == text.length &&
           systems.length == text1.length &&
           copyRight.length == copyRightText.length &&
           helpPrompt.length == helpText.length
@@ -197,7 +435,8 @@ const IndexPage: React.FC<PageProps> = () => {
             e.preventDefault();
             processCmd();
           }}
-          className="w-full"
+          className="w-full snap-center"
+          ref={scrollRef}
         >
           <input
             className="w-full bg-stone-900 text-white focus:outline-none"
@@ -205,7 +444,7 @@ const IndexPage: React.FC<PageProps> = () => {
             name="cmdline"
             value={cmdInput}
             onChange={(e) => cmdController(e.target.value)}
-            autoFocus
+            ref={focusRef}
           />
         </form>
       </div>
