@@ -1,7 +1,7 @@
 import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
 import { useState, useEffect, useRef } from "react";
-import { FileType, system } from "./system";
+import { FileType, system } from "../content/system";
 import {
   text,
   text1,
@@ -9,7 +9,7 @@ import {
   helpText,
   cowText,
   effectText,
-} from "./baseText";
+} from "../content/baseText";
 
 /* Wait some amount of time in ms */
 const delay = (ms: number) => new Promise((res) => setTimeout(res, ms));
