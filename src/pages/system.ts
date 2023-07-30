@@ -1,3 +1,4 @@
+export default {};
 export enum FileType {
   d,
   f,
