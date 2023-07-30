@@ -1,3 +1,4 @@
+export default {};
 export const text = `
  ____  _____   _         __       _   ____  ____                   __       
 |_   \\|_   _| (_)       [  |     / |_|_   ||   _|                 [  |  _   
@@ -19,12 +20,13 @@ export const text1 = `
 `;
 
 export const copyRightText = `1965 Andrew Niemack`;
-export const effectText = `Display effects from https://aleclownes.com/2017/02/01/crt-display.html`
+export const effectText = `Display effects from https://aleclownes.com/2017/02/01/crt-display.html`;
 export const helpText = `Enter 'help' to view the list of valid commands.`;
 
 export const cowText = [
-    `    \\   ^__^                            `,
-    `     \\  (oo)\\_______                    `,
-    `        (__)\\       )\\/\\                `,
-    `            ||----w |                   `,
-    `            ||     ||                   `]; 
+  `    \\   ^__^                            `,
+  `     \\  (oo)\\_______                    `,
+  `        (__)\\       )\\/\\                `,
+  `            ||----w |                   `,
+  `            ||     ||                   `,
+];
