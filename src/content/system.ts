@@ -57,19 +57,14 @@ const mesa: SystemFile = {
     `Refactored data aggregation system for time series data to improve performance, reduce code footprint, and reduce number of database tables. (Python)`,
     `Worked with one other developer to analyze web app usage patterns in order to identify unused or underutilized features. (Python)`,
     `Used Terraform for the configuration of web app resources in Azure. (DevOps)`,
-    `Created pipelines in Azure to deploy mobile app and containerized web apps. (DevOps,
-    Docker, Flutter, Android, IOS)`,
+    `Created pipelines in Azure to deploy mobile app and containerized web apps. (DevOps, Docker, Flutter, Android, IOS)`,
     `Led teams first code reviews during project and first project review post project.`,
-    `Led two other developers through all stages of the software development lifecycle to
-  deliver an improved rental order management system. (TypeScript, Remix)`,
+    `Led two other developers through all stages of the software development lifecycle to deliver an improved rental order management system. (TypeScript, Remix)`,
     `Created dev containers in VSCode for more consistent dev environments and to help onboard team members onto new projects more quickly. (DevOps, Docker)`,
     `Established a software development methodology based on principles of agile software development and taking inspiration from multiple methodologies and sources which best suited our team and purposes.`,
     `Onboarded and mentored newly hired junior developers.`,
-    `Worked through all stages of the software development lifecycle to deliver a mobile app
-  on Android and IOS to assist field operations with managing rental order information.
-  (Dart, Flutter)`,
-    `Worked through all stages of the software development lifecycle to deliver various
-  features to web app including approval system for rental order changes and an engineering change request system. (Python, Django)`,
+    `Worked through all stages of the software development lifecycle to deliver a mobile app on Android and IOS to assist field operations with managing rental order information. (Dart, Flutter)`,
+    `Worked through all stages of the software development lifecycle to deliver various features to web app including approval system for rental order changes and an engineering change request system. (Python, Django)`,
   ],
 };
 
