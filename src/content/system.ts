@@ -46,14 +46,31 @@ const asu: SystemFile = {
   children: [current, previous, bachelors, masters],
 };
 
-const mesa: SystemFile = {
+const mesa1: SystemFile = {
+  display: "mesa_lead.txt",
+  type: FileType.f,
+  content: [
+    `Mesa Natural Gas Solutions LLC`,
+    `Loveland, CO`,
+    `Lead Software Engineer August 2023 - Present`,
+    `Worked with stakeholders to develop product plans for new applications.`,
+    `Led the process of simplifying system architecture`,
+    `Identified conferences and workshops for team members to further develop their skills.`,
+    `Worked with each team member to determine career paths, set clear expectations, and create goals for career development.`,
+    `Promoted high performing team member.`,
+    `Reworked existing job descriptions and career paths.`,
+    `Established clear standards, processes, and best practices for the software engineering team.`
+  ],
+};
+
+const mesa0: SystemFile = {
   display: "mesa.txt",
   type: FileType.f,
   content: [
     `Mesa Natural Gas Solutions LLC`,
     `Loveland, CO`,
-    `Software Developer I, May 2021 - May 2022`,
-    `Software Developer II, May 2022 - Present`,
+    `Software Engineer I, May 2021 - May 2022`,
+    `Software Engineer II, May 2022 - August 2023`,
     `Refactored data aggregation system for time series data to improve performance, reduce code footprint, and reduce number of database tables. (Python)`,
     `Worked with one other developer to analyze web app usage patterns in order to identify unused or underutilized features. (Python)`,
     `Used Terraform for the configuration of web app resources in Azure. (DevOps)`,
@@ -106,7 +123,7 @@ const education: SystemFile = {
 const experience: SystemFile = {
   display: "experience",
   type: FileType.d,
-  children: [current, previous, mesa, elite, ncar],
+  children: [current, previous, mesa1, mesa0, elite, ncar],
 };
 
 const root: SystemFile = {
