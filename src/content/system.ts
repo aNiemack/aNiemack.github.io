@@ -53,13 +53,16 @@ const mesa1: SystemFile = {
     `Mesa Natural Gas Solutions LLC`,
     `Loveland, CO`,
     `Lead Software Engineer August 2023 - Present`,
+    `Led the redesign and improvement of web app used by customers for viewing telemetry
+    data, including adding features to view realtime telemetry data and notifications and generally making viewing important data more intuitive. (Django, Python)`,
+    `Led migration of cron jobs on VM to an Azure container app to provide better control over source code and to automate the release process. (Azure, TypeScript, CI/CD)`,
+    `Led the deprecation and replacement of backend systems with simpler and less costly alternatives. (Azure)`,
     `Worked with stakeholders to develop product plans for new applications.`,
     `Led the process of simplifying system architecture`,
     `Identified conferences and workshops for team members to further develop their skills.`,
     `Worked with each team member to determine career paths, set clear expectations, and create goals for career development.`,
-    `Promoted high performing team member.`,
     `Reworked existing job descriptions and career paths.`,
-    `Established clear standards, processes, and best practices for the software engineering team.`
+    `Established clear standards, processes, and best practices for the software engineering team.`,
   ],
 };
 
