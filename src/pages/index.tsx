@@ -383,7 +383,7 @@ const IndexPage: React.FC<PageProps> = () => {
             : "hidden"
         }
       >
-        &copy;{profileText}
+        {profileText}
       </div>
       <div
         className={
