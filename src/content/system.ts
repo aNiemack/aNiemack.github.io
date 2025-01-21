@@ -54,7 +54,7 @@ const col: SystemFile = {
     `Loveland, CO`,
     `Utility Systems Analyst, October 2024 - Present`,
     `Assessed existing Python code base and developed a plan for improvements 
-     including use of VCS, more controlled deployments, and better monitoring and logs. (Python)`,
+  including use of VCS, more controlled deployments, and better monitoring and logs. (Python)`,
   ],
 };
 
@@ -66,7 +66,7 @@ const mesa2: SystemFile = {
     `Loveland, CO`,
     `Lead Software Engineer August 2023 - October 2024`,
     `Led the development of experimental machine learning models 
-     for predicting IOT device events. (TensorFlow, Python)`,
+    for predicting IOT device events. (TensorFlow, Python)`,
     `Led the redesign and improvement of internal operations software 
      and external SAAS product used for viewing telemetry data, including 
      adding features to view realtime telemetry data and notifications and 
