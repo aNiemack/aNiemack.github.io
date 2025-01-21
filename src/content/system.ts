@@ -46,48 +46,67 @@ const asu: SystemFile = {
   children: [current, previous, bachelors, masters],
 };
 
-const mesa1: SystemFile = {
+const col: SystemFile = {
+  display: "col.txt",
+  type: FileType.f,
+  content: [
+    `City of Loveland Water & Power`,
+    `Loveland, CO`,
+    `Utility Systems Analyst, October 2024 - Present`,
+    `Assessed existing Python code base and developed a plan for improvements 
+     including use of VCS, more controlled deployments, and better monitoring and logs. (Python)`,
+  ],
+};
+
+const mesa2: SystemFile = {
   display: "mesa_lead.txt",
   type: FileType.f,
   content: [
     `Mesa Natural Gas Solutions LLC`,
     `Loveland, CO`,
-    `Lead Software Engineer August 2023 - Present`,
-    `Led the redesign and improvement of SAAS product for viewing telemetry data, 
-including adding features to view realtime telemetry data and notifications 
-and designing a more intuitive UI. (Django, Python)`,
-    `Led migration of cron jobs on VM to an Azure container app to provide better control over source code and to automate 
-the release process. (Azure, TypeScript, CI/CD)`,
-    `Led the deprecation and replacement of multiple backend systems including messaging systems and disparate
-storage solutions with simpler alternatives. (Azure)`,
+    `Lead Software Engineer August 2023 - October 2024`,
+    `Led the development of experimental machine learning models 
+     for predicting IOT device events. (TensorFlow, Python)`,
+    `Led the redesign and improvement of internal operations software 
+     and external SAAS product used for viewing telemetry data, including 
+     adding features to view realtime telemetry data and notifications and 
+     implementing a more intuitive UI. (Django, Python)`,
+    `Led the effort to eliminate repetitive system errors resulting in a 99% 
+     reduction in automated error emails from about 300 a day to about 1 a day. (Django, Python, Azure)`,
+    `Led improvements in the usage of cloud resources to improve system uptime. (Azure)`,
+    `Led migration of cron jobs from VM to an Azure container app to provide better control over source 
+     code and to automate the release process. (Azure, TypeScript, CI/CD)`,
+    `Led the deprecation and replacement of multiple backend systems including messaging systems and disparate 
+     data storage solutions with simpler alternatives. (Azure)`,
     `Worked with stakeholders to develop product plans for new applications.`,
-    `Led the process of simplifying system architecture`,
-    `Identified conferences and workshops for team members to further develop their skills.`,
     `Worked with each team member to determine career paths, set clear expectations, and create goals for career development.`,
-    `Reworked existing job descriptions and career paths.`,
     `Established clear standards, processes, and best practices for the software engineering team.`,
   ],
 };
 
-const mesa0: SystemFile = {
-  display: "mesa.txt",
+const mesa1: SystemFile = {
+  display: "mesa_se2.txt",
   type: FileType.f,
   content: [
     `Mesa Natural Gas Solutions LLC`,
     `Loveland, CO`,
-    `Software Engineer I, May 2021 - May 2022`,
     `Software Engineer II, May 2022 - August 2023`,
-    `Refactored data aggregation system for time series data to improve performance, reduce code footprint, and reduce number of database tables. (Python)`,
-    `Worked with one other developer to analyze web app usage patterns in order to identify unused or underutilized features. (Python)`,
-    `Used Terraform for the configuration of web app resources in Azure. (DevOps)`,
-    `Created pipelines in Azure to deploy mobile app and containerized web apps. (DevOps, Docker, Flutter, Android, IOS)`,
-    `Led teams first code reviews during project and first project review post project.`,
-    `Led two other developers through all stages of the software development lifecycle to deliver an improved rental order management system. (TypeScript, Remix)`,
-    `Created dev containers in VSCode for more consistent dev environments and to help onboard team members onto new projects more quickly. (DevOps, Docker)`,
-    `Established a software development methodology based on principles of agile software development and taking inspiration from multiple methodologies and sources which best suited our team and purposes.`,
-    `Onboarded and mentored newly hired junior developers.`,
-    `Worked through all stages of the software development lifecycle to deliver a mobile app on Android and IOS to assist field operations with managing rental order information. (Dart, Flutter)`,
-    `Worked through all stages of the software development lifecycle to deliver various features to web app including approval system for rental order changes and an engineering change request system. (Python, Django)`,
+    `Established a software development methodology based on principles of agile software development and taking inspiration 
+     from multiple methodologies and sources which best suited our team and purposes.`,
+    `Refactored data aggregation system for better performance. (Django, Python)`,
+  ],
+};
+
+const mesa0: SystemFile = {
+  display: "mesa_se1.txt",
+  type: FileType.f,
+  content: [
+    `Mesa Natural Gas Solutions LLC`,
+    `Loveland, CO`,
+    `Software Engineer I, May 2021 - August 2022`,
+    `Worked through all stages of the software development lifecycle to deliver a mobile app on Android and IOS 
+     allowing operations to record equipment movements. (Dart, Flutter)`,
+    `Implemented new features and fixed bugs as assigned. (Django, Python)`,
   ],
 };
 
@@ -129,7 +148,7 @@ const education: SystemFile = {
 const experience: SystemFile = {
   display: "experience",
   type: FileType.d,
-  children: [current, previous, mesa1, mesa0, elite, ncar],
+  children: [current, previous, col, mesa2, mesa1, mesa0, elite, ncar],
 };
 
 const root: SystemFile = {
