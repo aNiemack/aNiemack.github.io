@@ -6,6 +6,7 @@ import {
   text,
   text1,
   copyRightText,
+  profileText,
   helpText,
   cowText,
   effectText,
@@ -374,6 +375,15 @@ const IndexPage: React.FC<PageProps> = () => {
         }
       >
         &copy;{copyRight}
+      </div>
+      <div
+        className={
+          nightHawk.length == text.length && systems.length == text1.length
+            ? "text-white m-4"
+            : "hidden"
+        }
+      >
+        &copy;{profileText}
       </div>
       <div
         className={
